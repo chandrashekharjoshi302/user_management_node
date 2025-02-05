@@ -13,6 +13,13 @@ app.use(express.json());
 app.use(cors());
 app.use("/public", express.static("public"));
 
+app.use("/testing-one", (req, res) => {
+  res.send("API is running...");
+});
+
+app.use("/chandrashekhar", (req, res) => {
+  res.send("API is running in 302...");
+});
 // Routes
 app.use("/api/v1/auth", require("./routes/auth"));
 app.use("/api/v1/users", require("./routes/users"));
