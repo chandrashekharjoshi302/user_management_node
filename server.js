@@ -20,6 +20,12 @@ app.use("/testing-one", (req, res) => {
 app.use("/chandrashekhar", (req, res) => {
   res.send("API is running in 302...");
 });
+
+app.use("/", (req, res) => {
+  res.send(
+    "ha bhai ha internet pe hu or chl bhi ri h tere api / lga k route change kr"
+  );
+});
 // Routes
 app.use("/api/v1/auth", require("./routes/auth"));
 app.use("/api/v1/users", require("./routes/users"));
